@@ -1,0 +1,34 @@
+# Exclude everything by default
+# *
+
+# But wait, it's easier to blacklist the trash.
+# Source Code
+*.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.py
+*.toc
+*.fls
+*.fdb_latexmk
+
+# Directories
+src/
+**/src/
+__pycache__/
+
+# System
+.DS_Store
+.vscode/
+
+# Templates & Internal HTML
+*_template.html
+review.html
+study_room.html
+kids_template.html
+print_collection.html
+
+# Keep index.html and PDFs
+# !index.html
+# !**/*.pdf

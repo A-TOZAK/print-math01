@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5年生 算数プリント | 神教材製作所</title>
+    <meta name="description" content="現場の先生が作った、すぐに印刷して使える5年生算数プリント。AI活用・全17単元無料公開。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4b5563;
+            --accent: #2563eb;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-sub: #6b7280;
+            --border: #e5e7eb;
+            --ans-bg: #fff1f2;
+            --ans-text: #bef264;
+            --ans-btn-text: #9f1239;
+            --ans-btn-border: #fecdd3;
+            --ans-btn-bg: #fff1f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        /* Alert */
+        .alert-box {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 24px auto;
+            max-width: 800px;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .alert-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 24px auto;
+            max-width: 800px;
+            font-size: 0.9rem;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        /* Main */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .semester-section {
+            margin-bottom: 48px;
+        }
+
+        .semester-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .unit-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Unit Item */
+        .unit-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .unit-item.coming-soon {
+            opacity: 0.6;
+        }
+
+        .unit-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .unit-number {
+            background: #f3f4f6;
+            color: var(--text-sub);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .unit-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .status-badge {
+            margin-left: auto;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Level Grid */
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .level-card {
+            background: #f9fafb;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .level-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-sub);
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 4px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            background: #fff;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #f3f4f6;
+            border-color: #d1d5db;
+        }
+
+        .btn-ans {
+            color: var(--ans-btn-text);
+            background: var(--ans-btn-bg);
+            border-color: var(--ans-btn-border);
+        }
+
+        .btn-ans:hover {
+            background: #ffe4e6;
+        }
+
+        .btn-teacher {
+            color: #1e40af;
+            background: #dbeafe;
+            border-color: #93c5fd;
+        }
+
+        .btn-teacher:hover {
+            background: #bfdbfe;
+        }
+
+        .btn-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .teacher-link {
+            margin-left: auto;
+        }
+
+        .teacher-link .btn {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .level-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <h1>5年生 算数プリント</h1>
+            <p class="subtitle">現場の先生・保護者のための、シンプルで実用的な問題集</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="alert-box">
+            <span class="alert-icon">⚠️</span>
+            <div>
+                <strong>ご利用上の注意</strong><br>
+                このプリントは生成AI（Antigravity）を使用して作成されています。細心の注意を払っておりますが、問題文や解答に誤りが含まれている可能性があります。必ず授業や指導の前に内容をご確認の上、ご利用ください。
+            </div>
+        </div>
+
+        <div class="info-box">
+            <span class="alert-icon">✨</span>
+            <div>
+                <strong>全単元公開中</strong><br>
+                5年生の全17単元のプリントが利用可能です。
+            </div>
+        </div>
+
+        <section class="semester-section">
+            <h2 class="semester-title">1学期</h2>
+            <div class="unit-list">
+                <!-- Unit 01 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">01</span>
+                        <span class="unit-name">整数と小数</span>
+                        <div class="teacher-link">
+                            <a href="01_整数と小数/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="01_整数と小数/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="01_整数と小数/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="01_整数と小数/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="01_整数と小数/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="01_整数と小数/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="01_整数と小数/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="01_整数と小数/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="01_整数と小数/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="01_整数と小数/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="01_整数と小数/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 02 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">02</span>
+                        <span class="unit-name">体積</span>
+                        <div class="teacher-link">
+                            <a href="02_体積/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="02_体積/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="02_体積/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="02_体積/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="02_体積/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="02_体積/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="02_体積/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="02_体積/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="02_体積/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="02_体積/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="02_体積/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 03 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">03</span>
+                        <span class="unit-name">比例</span>
+                        <div class="teacher-link">
+                            <a href="03_比例/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="03_比例/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="03_比例/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="03_比例/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="03_比例/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="03_比例/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="03_比例/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="03_比例/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="03_比例/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="03_比例/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="03_比例/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 04 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">04</span>
+                        <span class="unit-name">小数のかけ算</span>
+                        <div class="teacher-link">
+                            <a href="04_小数のかけ算/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="04_小数のかけ算/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="04_小数のかけ算/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="04_小数のかけ算/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="04_小数のかけ算/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="04_小数のかけ算/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="04_小数のかけ算/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="04_小数のかけ算/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="04_小数のかけ算/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="04_小数のかけ算/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="04_小数のかけ算/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 05 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">05</span>
+                        <span class="unit-name">小数のわり算</span>
+                        <div class="teacher-link">
+                            <a href="05_小数のわり算/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="05_小数のわり算/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="05_小数のわり算/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="05_小数のわり算/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="05_小数のわり算/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="05_小数のわり算/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="05_小数のわり算/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="05_小数のわり算/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="05_小数のわり算/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="05_小数のわり算/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="05_小数のわり算/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 06 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">06</span>
+                        <span class="unit-name">割合（１）</span>
+                        <div class="teacher-link">
+                            <a href="06_割合1/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="06_割合1/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="06_割合1/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="06_割合1/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="06_割合1/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="06_割合1/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="06_割合1/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="06_割合1/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="06_割合1/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="06_割合1/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="06_割合1/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 07 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">07</span>
+                        <span class="unit-name">合同な図形</span>
+                        <div class="teacher-link">
+                            <a href="07_合同な図形/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="07_合同な図形/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="07_合同な図形/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="07_合同な図形/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="07_合同な図形/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="07_合同な図形/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="07_合同な図形/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="07_合同な図形/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="07_合同な図形/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="07_合同な図形/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="07_合同な図形/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 08 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">08</span>
+                        <span class="unit-name">たしかめよう（1学期まとめ）</span>
+                        <div class="teacher-link">
+                            <a href="08_たしかめよう/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="08_たしかめよう/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="08_たしかめよう/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="08_たしかめよう/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="08_たしかめよう/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="08_たしかめよう/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="08_たしかめよう/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="08_たしかめよう/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="08_たしかめよう/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="08_たしかめよう/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="08_たしかめよう/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="semester-section">
+            <h2 class="semester-title">2学期</h2>
+            <div class="unit-list">
+                <!-- Unit 09 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">09</span>
+                        <span class="unit-name">整数（偶数・奇数・倍数・約数）</span>
+                        <div class="teacher-link">
+                            <a href="09_整数/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="09_整数/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="09_整数/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="09_整数/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="09_整数/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="09_整数/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="09_整数/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="09_整数/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="09_整数/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="09_整数/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="09_整数/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 10 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">10</span>
+                        <span class="unit-name">分数のたし算・ひき算</span>
+                        <div class="teacher-link">
+                            <a href="10_分数のたし算ひき算/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="10_分数のたし算ひき算/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="10_分数のたし算ひき算/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="10_分数のたし算ひき算/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="10_分数のたし算ひき算/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="10_分数のたし算ひき算/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="10_分数のたし算ひき算/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="10_分数のたし算ひき算/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="10_分数のたし算ひき算/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="10_分数のたし算ひき算/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="10_分数のたし算ひき算/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 11 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">11</span>
+                        <span class="unit-name">平均</span>
+                        <div class="teacher-link">
+                            <a href="11_平均/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="11_平均/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="11_平均/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="11_平均/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="11_平均/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="11_平均/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="11_平均/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="11_平均/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="11_平均/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="11_平均/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="11_平均/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 12 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">12</span>
+                        <span class="unit-name">単位量あたりの大きさ</span>
+                        <div class="teacher-link">
+                            <a href="12_単位量あたりの大きさ/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="12_単位量あたりの大きさ/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="12_単位量あたりの大きさ/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="12_単位量あたりの大きさ/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="12_単位量あたりの大きさ/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="12_単位量あたりの大きさ/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="12_単位量あたりの大きさ/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="12_単位量あたりの大きさ/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="12_単位量あたりの大きさ/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="12_単位量あたりの大きさ/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="12_単位量あたりの大きさ/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 13 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">13</span>
+                        <span class="unit-name">割合（２）</span>
+                        <div class="teacher-link">
+                            <a href="13_割合2/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="13_割合2/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="13_割合2/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="13_割合2/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="13_割合2/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="13_割合2/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="13_割合2/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="13_割合2/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="13_割合2/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="13_割合2/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="13_割合2/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 14 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">14</span>
+                        <span class="unit-name">たしかめよう（2学期まとめ）</span>
+                        <div class="teacher-link">
+                            <a href="14_たしかめよう2学期/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="14_たしかめよう2学期/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="14_たしかめよう2学期/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="14_たしかめよう2学期/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="14_たしかめよう2学期/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="14_たしかめよう2学期/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="14_たしかめよう2学期/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="14_たしかめよう2学期/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="14_たしかめよう2学期/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="14_たしかめよう2学期/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="14_たしかめよう2学期/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="semester-section">
+            <h2 class="semester-title">3学期</h2>
+            <div class="unit-list">
+                <!-- Unit 15 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">15</span>
+                        <span class="unit-name">正多角形と円</span>
+                        <div class="teacher-link">
+                            <a href="15_正多角形と円/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="15_正多角形と円/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="15_正多角形と円/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="15_正多角形と円/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="15_正多角形と円/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="15_正多角形と円/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="15_正多角形と円/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="15_正多角形と円/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="15_正多角形と円/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="15_正多角形と円/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="15_正多角形と円/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 16 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">16</span>
+                        <span class="unit-name">角柱と円柱</span>
+                        <div class="teacher-link">
+                            <a href="16_角柱と円柱/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="16_角柱と円柱/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="16_角柱と円柱/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="16_角柱と円柱/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="16_角柱と円柱/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="16_角柱と円柱/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="16_角柱と円柱/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="16_角柱と円柱/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="16_角柱と円柱/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="16_角柱と円柱/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="16_角柱と円柱/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit 17 -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <span class="unit-number">17</span>
+                        <span class="unit-name">5年のまとめ</span>
+                        <div class="teacher-link">
+                            <a href="17_5年のまとめ/PDF/単元のポイント.pdf" class="btn btn-teacher">📘 先生に向けて</a>
+                        </div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card">
+                            <div class="level-label">基礎</div>
+                            <div class="btn-group">
+                                <a href="17_5年のまとめ/PDF/01_基礎.pdf" class="btn">問題</a>
+                                <a href="17_5年のまとめ/PDF/01_基礎_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">標準</div>
+                            <div class="btn-group">
+                                <a href="17_5年のまとめ/PDF/02_標準.pdf" class="btn">問題</a>
+                                <a href="17_5年のまとめ/PDF/02_標準_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">応用</div>
+                            <div class="btn-group">
+                                <a href="17_5年のまとめ/PDF/03_応用.pdf" class="btn">問題</a>
+                                <a href="17_5年のまとめ/PDF/03_応用_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">思考力</div>
+                            <div class="btn-group">
+                                <a href="17_5年のまとめ/PDF/04_思考力.pdf" class="btn">問題</a>
+                                <a href="17_5年のまとめ/PDF/04_思考力_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                        <div class="level-card">
+                            <div class="level-label">まとめ</div>
+                            <div class="btn-group">
+                                <a href="17_5年のまとめ/PDF/05_まとめ.pdf" class="btn">問題</a>
+                                <a href="17_5年のまとめ/PDF/05_まとめ_解答.pdf" class="btn btn-ans">解答</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 神教材製作所</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

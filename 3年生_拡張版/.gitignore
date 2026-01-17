@@ -1,0 +1,18 @@
+# Exclude LaTeX build artifacts
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dvi
+*.out
+*.toc
+
+# Exclude python scripts for generation if not needed (optional, keeping them for now as it is a "project")
+# *.py
+
+# Exclude system files
+.DS_Store
+Thumbs.db
+
+# Keep src (.tex) and PDF folders
